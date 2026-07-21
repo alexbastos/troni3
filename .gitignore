@@ -4,6 +4,7 @@ env
 secrets_alex.txt
 README_SECURITY.md
 troni2.code-workspace
+experiments/
 *.pyc
 __pycache__/
 venv/
