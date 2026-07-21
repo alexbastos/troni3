@@ -1,8 +1,11 @@
 .env
+.env.example
+env
 secrets_alex.txt
+README_SECURITY.md
+troni2.code-workspace
 *.pyc
 __pycache__/
 venv/
 .DS_Store
 *.sqlite3
-
