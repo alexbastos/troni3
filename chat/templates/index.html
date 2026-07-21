@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troni</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+  <header class="cabecalho container">
+    <div class="cabecalho__conteudo">
+      <h1 class="titulo">Troni</h1>
+    </div>
+    <div class="cabecalho__acoes">
+      <!-- espaço para botões futuros -->
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="chat container" id="chat">
+      <p class="chat__bolha chat__bolha--bot">
+        👋 Olá! Eu sou o <strong>Troni</strong>, um assistente virtual criado para auxiliar estudantes, docentes e outras pessoas interessadas no curso de Engenharia Mecatrônica da UFSJ.<br>
+        Utilizo para as respostas geração por IA, portanto, posso errar em algumas questões. Para conferir as informações, sempre retornarei as fontes internas que usei para consulta.<br>
+        Todas as informações estão disponíveis em:
+        <a href="https://ufsj.edu.br/cemec/" target="_blank" rel="noopener noreferrer">Mecatrônica - UFSJ</a>.
+      </p>
+    </section>
+
+    <section class="entrada container">
+      <div class="entrada__container">
+        <input 
+          type="text" 
+          class="entrada__input" 
+          placeholder="Digite sua dúvida aqui..." 
+          id="input" 
+          aria-label="Campo de mensagem">
+        <button id="botao-enviar" class="botao__enviar" type="button" aria-label="Enviar mensagem">
+          <img src="{% static 'img/icone-enviar.svg' %}" class="icone icone--enviar-mensagem" alt="Enviar">
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

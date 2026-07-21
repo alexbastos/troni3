@@ -1,0 +1,8 @@
+.env
+secrets_alex.txt
+*.pyc
+__pycache__/
+venv/
+.DS_Store
+*.sqlite3
+

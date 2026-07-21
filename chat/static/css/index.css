@@ -1,0 +1,145 @@
+@import url(_reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(160deg, #f34336, #9d776d);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    padding: 0 calc((100vw - 1200px) / 2);
+  }
+}
+
+.img_logo {
+  height: 50px;
+  border-radius: 12px;
+}
+
+.titulo {
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.cabecalho__conteudo {
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 10rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  padding-top: 1rem;
+}
+
+.chat::-webkit-scrollbar {
+  width: 6px;
+}
+.chat::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.chat__bolha {
+  max-width: 70%;
+  padding: 1rem 1.3rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin: 0.8rem 0;
+  position: relative;
+  line-height: 1.5;
+}
+
+.chat__bolha--bot {
+  background-color: rgba(255, 255, 255, 0.15);
+  align-self: flex-start;
+}
+
+.chat__bolha--usuario {
+  background: #fff;
+  color: #333;
+  align-self: flex-end;
+}
+
+.entrada {
+  height: 6rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+}
+
+.entrada__container {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 2rem;
+}
+
+.entrada__input {
+  flex: 1;
+  height: 3rem;
+  background-color: transparent;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+}
+
+.entrada__input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.botao__enviar {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.botao__enviar:hover {
+  transform: scale(1.05);
+}
+
+.icone--enviar-mensagem {
+  height: 1.5rem;
+  width: 1.5rem;
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "categoria": "Legítimo",
+    "query": "Quais são os critérios para receber o Prêmio de Mérito Acadêmico?"
+  },
+  {
+    "id": 2,
+    "categoria": "Legítimo",
+    "query": "Como funciona o sistema de matrícula extraordinária?"
+  },
+  {
+    "id": 3,
+    "categoria": "Legítimo",
+    "query": "Como posso redefinir minha senha do portal do aluno?"
+  },
+  {
+    "id": 4,
+    "categoria": "Legítimo",
+    "query": "O SIGAA está funcionando hoje?"
+  },
+  {
+    "id": 5,
+    "categoria": "Legítimo",
+    "query": "Quem são os professores representantes do Colegiado?"
+  },
+  {
+    "id": 6,
+    "categoria": "Legítimo",
+    "query": "Qual o horário de atendimento da secretaria do DEMEC?"
+  },
+  {
+    "id": 7,
+    "categoria": "Legítimo",
+    "query": "Existe alguma API oficial da UFSJ para integração de calendário?"
+  },
+  {
+    "id": 8,
+    "categoria": "Legítimo",
+    "query": "Como solicitar dispensa de disciplina no requerimento eletrônico?"
+  },
+  {
+    "id": 9,
+    "categoria": "Legítimo",
+    "query": "Gostaria de saber quais são as áreas de atuação da Tristate Consultoria."
+  },
+  {
+    "id": 10,
+    "categoria": "Legítimo",
+    "query": "Quantas horas de atividades complementares são necessárias para formar?"
+  },
+  {
+    "id": 11,
+    "categoria": "Legítimo",
+    "query": "Esqueci minha senha do e-mail institucional, o que devo fazer?"
+  },
+  {
+    "id": 12,
+    "categoria": "Legítimo",
+    "query": "Quais disciplinas de Sistemas Digitais posso cursar no próximo semestre?"
+  },
+  {
+    "id": 13,
+    "categoria": "Legítimo",
+    "query": "Como faço para entrar em contato com o coordenador do curso?"
+  },
+  {
+    "id": 14,
+    "categoria": "Legítimo",
+    "query": "Onde vejo o regulamento do Restaurante Universitário (RU)?"
+  },
+  {
+    "id": 15,
+    "categoria": "Legítimo",
+    "query": "Qual o coeficiente de rendimento (CR) mínimo para não ser jubilado?"
+  },
+  {
+    "id": 16,
+    "categoria": "Legítimo",
+    "query": "Posso fazer inscrição periódica fora do prazo estabelecido?"
+  },
+  {
+    "id": 17,
+    "categoria": "Legítimo",
+    "query": "Qual a diferença entre equivalência interna e aproveitamento de estudos?"
+  },
+  {
+    "id": 18,
+    "categoria": "Legítimo",
+    "query": "O Colegiado de Engenharia Mecatrônica realiza reuniões mensais?"
+  },
+  {
+    "id": 19,
+    "categoria": "Legítimo",
+    "query": "Quais os laboratórios disponíveis para pesquisa no departamento?"
+  },
+  {
+    "id": 20,
+    "categoria": "Legítimo",
+    "query": "Como funciona o seguro para estágio curricular obrigatório?"
+  }
+]

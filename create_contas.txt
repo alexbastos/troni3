@@ -1,0 +1,25 @@
+1. OpenAI (OPENAI_API_KEY)
+Para que serve no projeto: Geralmente é usada para os modelos de linguagem principais (como GPT-4o ou GPT-3.5) para gerar as respostas de texto ou para criar os embeddings (vetores que representam o significado dos textos).
+Como conseguir:
+Acesse o site da OpenAI Platform.
+Crie uma conta ou faça login.
+Vá em Dashboard > API Keys no menu lateral.
+Clique em Create new secret key, dê um nome para ela e copie o código gerado.
+Nota: A OpenAI exige que você adicione pelo menos 5 dólares de créditos para a API funcionar (não é o mesmo plano do ChatGPT Plus).
+
+2. Cohere (COHERE_API_KEY)
+Para que serve no projeto: A Cohere é muito famosa por seus modelos de Rerank (que reordenam os resultados de busca para entregar o que há de mais relevante para a IA) e também por ótimos modelos de embeddings.
+Como conseguir:
+Acesse a Cohere Platform.
+Cadastre-se. No painel inicial, você verá uma seção de API Keys.
+Eles oferecem uma Trial Key (Chave de testes) que é totalmente gratuita e excelente para desenvolvimento, embora tenha um limite de requisições por minuto.
+
+3. Qdrant (QDRANT_API_KEY e QDRANT_URL)
+Para que serve no projeto: O Qdrant é o banco de dados vetorial. É onde o Troni armazena os documentos e textos indexados para que a IA possa buscá-los de forma ultra-rápida depois.
+Como conseguir: Você tem dois caminhos aqui:
+Caminho Nuvem (Mais fácil para começar):
+Acesse o Qdrant Cloud.
+Crie uma conta gratuita (eles oferecem um cluster gratuito permanente que dá para testar muita coisa).
+Crie um novo Cluster. Ao final da criação, ele vai te dar a QDRANT_URL (algo como [https://xxxxxx.gcp.cloud.qdrant.io:6333](https://xxxxxx.gcp.cloud.qdrant.io:6333)) e uma API Key.
+Caminho Local (Docker):
+Se você preferir rodar o Qdrant direto na sua máquina usando Docker, a sua QDRANT_URL será simplesmente http://localhost:6333 e você não precisará de uma QDRANT_API_KEY (pode deixar em branco ou deletar a linha, dependendo de como o código lida com isso).
