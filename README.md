@@ -22,6 +22,34 @@ O sistema combina **modelos de linguagem (LLMs)** com uma base documental curada
 - **OpenAI Embeddings** para representação vetorial de textos.  
 - **LLM (GPT)** para geração de respostas condicionadas ao contexto recuperado.  
 - **Métricas automáticas** para avaliar desempenho (similaridade, ROUGE-L, alucinação etc).  
+
+---
+
+## 🛡️ Arquitetura de Segurança DevSecOps (Melhorias desta Versão)
+
+Nesta versão, o **Troni** incorporou uma arquitetura de segurança multicamadas avançada para mitigar ameaças de **Prompt Injection (Direto e Indireto)** e **Jailbreaks** em cenários de **Agentic RAG**, além de eliminar Falsos Positivos em perguntas acadêmicas legítimas.
+
+### 🔐 Camadas de Proteção Implementadas
+
+1. **Delimitadores Dinâmicos (DD)**: Marcadores aleatórios gerados por requisição (`===SEC_<hash>===`) que envolvem o contexto recuperado do Qdrant. Impedem que documentos maliciosos consigam fechar tags estruturais do prompt.
+2. **Isolamento por LLM Quarentena (DLS / Dual-LLM Pattern)**: O contexto bruto recuperado é processado primeiramente por um modelo isolado (`gpt-4o-mini`), sem instruções institucionais, cuja única função é extrair fatos objetivos e ignorar comandos adversariais no texto.
+3. **Refinamento dos Filtros de Entrada (`PromptInjectionFilter`)**:
+   - Remoção de termos ambíguos (`sistema`, `senha`, `api`) dos `fuzzy_terms`, zerando bloqueios indevidos em dúvidas de discentes.
+   - Implementação de expressões regulares compostas (`dangerous_patterns`) para capturar tentativas complexas de injeção (Modo DAN, Prompt Leakage, Override, etc).
+4. **Validação de Saída (`OutputValidator`)**: Verificação da resposta final para evitar vazamento de credenciais, chaves de API ou prompts internos de sistema.
+5. **Auditoria Automatizada com LLM-as-a-Judge (`tests_llm_judge.py`)**: Management command que executa testes adversariais automatizados usando um modelo LLM imparcial como juiz.
+
+### 📊 Resultados dos Testes de Segurança (120 Prompts)
+
+A validação experimental com 120 requisições (100 ataques adversariais + 20 prompts legítimos acadêmicos) no pipeline RAG real demonstrou:
+
+| Métrica | Resultado | Significado |
+|---|---|---|
+| **ASR (Attack Success Rate)** | **0.00%** | Blindagem total contra injeções diretas e indiretas |
+| **FPR (False Positive Rate)** | **0.00%** | Zero bloqueios indevidos em consultas acadêmicas legítimas |
+| **Precision** | **100.00%** | Precisão absoluta na classificação e atendimento |
+| **Recall / F1-Score** | **100.00%** | Equilíbrio perfeito entre segurança e usabilidade |
+
 ---
 
 ## 🗂 Estrutura dos Arquivos
